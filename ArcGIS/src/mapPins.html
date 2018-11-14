@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+    <div class="sidenav">
+        <a href="revWarMap.html">Revolutionary War</a>
+        <a href="civWarMap.html">Civil War</a>
+        <div class="dropdown-container">
+            <p>This box will give more information about the time period selected. </p>
+        </div>
+        <a href="mapPins.html">Pork Roll</a>
+        <div class="dropdown-container">
+            <p>Click 'pork roll' to try our styled map pins.</p>
+        </div>
+        <a href="taylorham.html">Taylor Ham</a>
+    </div>
+    <div class="content">
+
+        <button class="trigger">Click here to see a document</button>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h1>This is a pin where we could put the images or media types</h1>
+            </div>
+        </div>
+        <script>
+            var modal = document.querySelector(".modal");
+            var trigger = document.querySelector(".trigger");
+            var closeButton = document.querySelector(".close-button");
+
+            function toggleModal() {
+                modal.classList.toggle("show-modal");
+            }
+
+            function windowOnClick(event) {
+                if (event.target === modal) {
+                    toggleModal();
+                }
+            }
+
+            trigger.addEventListener("click", toggleModal);
+            closeButton.addEventListener("click", toggleModal);
+            window.addEventListener("click", windowOnClick);
+        </script>
+    </div>
+
+</body>
+
+</html>
