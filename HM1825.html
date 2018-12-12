@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Trentoniana</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://use.typekit.net/jtb7pbt.css">
+  <link rel="stylesheet" href="https://use.typekit.net/jtb7pbt.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="map"></div>
+  <script>
+    var map;
+    var modal = document.getElementById('myModal');
+    var span = document.getElementsByClassName("close")[0];
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+          lat: 40.217052,
+          lng: -74.742935
+        },
+        zoom: 14,
+        styles: [
+  {
+    "featureType": "administrative",
+    "stylers": [
+      {
+        "saturation": "-100"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.province",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape",
+    "stylers": [
+      {
+        "saturation": -100
+      },
+      {
+        "lightness": 65
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "stylers": [
+      {
+        "saturation": -100
+      },
+      {
+        "lightness": "50"
+      },
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "stylers": [
+      {
+        "saturation": "-100"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "stylers": [
+      {
+        "lightness": 30
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "stylers": [
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "stylers": [
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "stylers": [
+      {
+        "lightness": "40"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "stylers": [
+      {
+        "saturation": -100
+      },
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "hue": "#ffff00"
+      },
+      {
+        "saturation": -97
+      },
+      {
+        "lightness": -25
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "saturation": -100
+      },
+      {
+        "lightness": -25
+      }
+    ]
+  }
+]
+      });
+
+      var myLatlng = {
+        lat: 40.217052,
+        lng: -74.742935
+      };
+      var imgLoc = {
+        lat: 40.228358,
+        lng: -74.760948
+      };
+      var vidLoc = {
+        lat: 40.221134,
+        lng: -74.755101
+      };
+      var musLoc = {
+        lat: 40.220085,
+        lng: -74.769273
+      };
+      var three = {
+        lat: 40.223025,
+        lng: -74.763352
+      };
+      modal = document.getElementById('myModal');
+      span = document.getElementsByClassName("close")[0];
+
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'pdf example'
+      });
+
+      var marker2 = new google.maps.Marker({
+        position: three,
+        map: map,
+        title: '3d example'
+      });
+
+      var marker3 = new google.maps.Marker({
+        position: imgLoc,
+        map: map,
+        title: 'image example'
+      });
+
+      var marker4 = new google.maps.Marker({
+        position: vidLoc,
+        map: map,
+        title: 'video example'
+      });
+
+      var marker5 = new google.maps.Marker({
+        position: musLoc,
+        map: map,
+        title: 'Music example'
+      });
+
+      mapTypeControl = false;
+      // When the user clicks on <span> (x), close the modal
+      // document.getElementsByClassName('close').onclick = function() {
+      //   modal.style.display = "none";
+      //   colsole.log('close by x');
+      // }
+      // document.getElementsByClassName('x').onclick = function() {
+      //   modal.style.display = "none";
+      //   colsole.log('close by x');
+      // }
+
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          console.log('close by map');
+        }
+      }
+
+      //pdf example
+      marker.addListener('click', function() {
+        modal = document.getElementById('myModal');
+        modal.style.display = "block";
+      });
+
+      //3d example
+      marker2.addListener('click', function() {
+        modal = document.getElementById('3dModal');
+        modal.style.display = "block";
+      });
+
+      //img example
+      marker3.addListener('click', function() {
+        modal = document.getElementById('imgModal');
+        modal.style.display = "block";
+      });
+
+      //video example
+      marker4.addListener('click', function() {
+        modal = document.getElementById('vidModal');
+        modal.style.display = "block";
+      });
+
+      //music example
+      marker5.addListener('click', function() {
+        modal = document.getElementById('musModal');
+        modal.style.display = "block";
+      });
+
+    }
+    function closeIt(){
+      console.log('ahhhh');
+      modal.style.display = "none";
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf_viewer.js.map"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0t7FySYEKnXxynzCyXJRK2K8orXmDPBk&callback=initMap" async defer></script>
+  <div class="home-btn">
+    <a href="index.html"><img src="img/tlogo.png"></a>
+  </div>
+  <div class='navbar'>
+
+    <a href="ModernDay.html">
+      <h2 > Modern Day </h2>
+    </a>
+
+    <a href="HM2017.html"><h2 class='active'> Historical Maps </h2> </a>
+    <li class="descript">Go back in time and explore Old Trenton. Select a time period. click the pins and drag the map to interact</li>
+    <a href="HM2017.html"><li>2017-2001</li> </a>
+    <a href="HM2000.html"><li>2000-1976</li> </a>
+    <a href="HM1975.html"><li>1975-1951</li> </a>
+    <a href="HM1950.html"><li>1950-1926</li> </a>
+    <a href="HM1925.html"><li>1925-1901</li> </a>
+    <a href="HM1900.html"><li>1900-1876</li> </a>
+    <a href="HM1875.html"><li>1875-1851</li> </a>
+    <a href="HM1850.html"><li>1850-1826</li> </a>
+    <a href="HM1825.html"><li class='active'>1825-1801</li> </a>
+    <a href="HM1800.html"><li>1800-1776</li> </a>
+    <a href="HM1775.html"><li>1775-1751</li> </a>
+    <a href="HM1750.html"><li>1750-1701</li> </a>
+    <a href="HM1700.html"><li>1700-1600</li> </a>
+    <a href="HM1600.html"><li>1600-Pre</li> </a>
+  </div>
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeIt()">&times;</span>
+      <h3>Title</h3>
+      <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/639081933&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
+      <iframe src="http://www.trentonhistory.org/Documents/TrentonIn1775.pdf" style="width: 100%;height: 300px;border: none;"></iframe>
+    </div>
+  </div>
+  <div id="3dModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <!-- <span class="close">&times;</span> -->
+      <span class="close" onclick="closeIt()">&times;</span>
+      <h3>Title</h3>
+      <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/639081933&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
+      <div class="sketchfab-embed-wrapper"><iframe width:"100%" height="200" src="https://sketchfab.com/models/412d2f9b212740c9b4ba8b91aec8579c/embed?autospin=0.2&amp;camera=0" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true"
+          webkitallowfullscreen="true"></iframe>
+        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+          <a href="https://sketchfab.com/models/412d2f9b212740c9b4ba8b91aec8579c?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">VAZ 2106 (3d scan)</a>
+          by <a href="https://sketchfab.com/rudavin?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">rudavin</a>
+          on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="imgModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeIt()">&times;</span>
+      <h3>Title</h3>
+      <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/639081933&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
+      <img src="https://66.media.tumblr.com/dcd0d00ca6b8a7c263ba8990af502476/tumblr_pfvrrzAMaE1wdztrqo1_1280.png" style="width:100%;border: none;"> </img>
+    </div>
+  </div>
+
+  <div id="musModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeIt()">&times;</span>
+      <h3>Title</h3>
+      <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/639081933&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
+      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/639081933&color=%23a70023&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+    </div>
+  </div>
+
+  <div id="vidModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeIt()">&times;</span>
+      <h3>Title</h3>
+      <!-- <iframe width="100%" oheight="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/639081933&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> -->
+      <iframe width:"100%" height="200" src="https://www.youtube.com/embed/O5g87QIwwAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</body>
+
+</html>

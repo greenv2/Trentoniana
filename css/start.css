@@ -25,7 +25,7 @@ body{
   text-align: center;
   background-image: url('../img/TrentonMap.jpeg');
   background-size: cover;
-  background-blend-mode: lighten;
+   background-blend-mode: lighten;
   background-color: #84775f;
   position:absolute;
   top:0;
@@ -57,16 +57,18 @@ body{
 }
 
 #explore{
-  padding: 10px 20px 10px 20px;
+  padding: 12px 22px 12px 22px;
   font-family: calder-lc, sans-serif;
   background-color: rgba(231, 234, 234, 0.75);
+  box-shadow: 5px 5px 5px rgba(91, 91, 91, 0.75);
   text-decoration: none;
   color: #b22025;
+
 }
 
 #explore:hover{
-  padding: 12px 22px 12px 22px;
-  box-shadow: 5px 5px 5px rgba(91, 91, 91, 0.75);
+  padding: 12px 24px 12px 24px;
+  box-shadow: 5px 5px 5px rgba(204, 51, 0, 0.75);
   transition:ease-in;
 }
 

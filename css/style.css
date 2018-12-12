@@ -1,0 +1,150 @@
+/* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  --red-color: #b22025;
+  --smoke-gray: #e7eaea;
+  --steel-gray: #343434;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Black w/ opacity */
+}
+
+.modal-content span {
+  font-family: calder-dark-grit-shadow, sans-serif;
+  font-size: 40px;
+}
+
+
+.modal-content {
+  background-color: var(--steel-gray);
+  /* margin: 15% auto; */
+  /* 15% from the top and centered */
+  padding: 0px 15px 0px 15px;
+  width: 435px;
+  max-height: 80%;
+  min-height: 50%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  color: var(--smoke-gray);
+  text-align: center;
+  /* float: right;
+    display: inline-block; */
+  bottom: 0;
+  margin-bottom: 20px;
+  /* Could be more or less, depending on screen size */
+}
+
+.modal-content h3{
+  font-family: calder-dark-grit-shadow, sans-serif;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home-btn {
+  right: 0;
+  top: 0;
+  z-index: 200;
+  display: inline-block;
+  width: 435px;
+  height: 50px;
+  background: var(--steel-gray);
+  position: absolute;
+  padding: 15px;
+  text-align: center;
+}
+
+.home-btn img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.navbar {
+  left: 0;
+  top: 0;
+  z-index: 200;
+  position: absolute;
+  background: var(--steel-gray);
+  height: 100%;
+  padding: 0px 25px 0px 25px;
+  overflow: auto;
+  width: 300px;
+}
+
+.navbar li {
+  /* padding-left: 50px;
+  padding-bottom: 20px; */
+  padding: 10px 0px 10px 50px;
+  list-style: none;
+  font-family: calder-lc, sans-serif;
+  color: var(--smoke-gray);
+}
+
+.navbar h2 {
+  font-family: calder-dark-grit-shadow, sans-serif;
+  color: var(--smoke-gray);
+}
+
+.navbar a li:hover {
+  background: var(--smoke-gray);
+  color: var(--steel-gray);
+}
+li.descript{
+  padding-left: 30px;
+  padding-top: 5px;
+}
+
+li.active{
+  border-left: solid 5px var(--red-color);
+  border-right: solid 5px var(--red-color);
+  padding-left: 45px;
+}
+h2.active {
+  text-shadow: 4px 4px var(--red-color);
+}
+
+.navbar a {
+  text-decoration: none;
+}
