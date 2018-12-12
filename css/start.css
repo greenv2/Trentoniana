@@ -23,10 +23,8 @@ body{
 .background{
   min-height:100%;
   text-align: center;
-  background-image: url('../img/TrentonMap.jpeg');
+  background-image: url("../img/indexMap.png");
   background-size: cover;
-   background-blend-mode: lighten;
-  background-color: #84775f;
   position:absolute;
   top:0;
   bottom:0;
@@ -63,15 +61,62 @@ body{
   box-shadow: 5px 5px 5px rgba(91, 91, 91, 0.75);
   text-decoration: none;
   color: #b22025;
+  border:0px;
 
 }
 
 #explore:hover{
   padding: 12px 24px 12px 24px;
-  box-shadow: 5px 5px 5px rgba(204, 51, 0, 0.75);
+  box-shadow: 5px 5px 5px #b22025;
   transition:ease-in;
 }
 
+.button:hover{
+  color: #343434;
+  transition:ease-in;
+
+
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    background-color: rgba(231, 234, 234, 0.7);;
+
+
+}
+
+
+.button {
+    opacity: 0.7;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #b22025;
+    opacity: 0.7;
+    margin-left: 5px;
+}
+
+/* Bottom left text */
+
+.bottomLeft {
+    position: absolute;
+    left: 16px;
+    bottom: 10px;
+}
+
+/* Bottom right text */
+
+.bottomRight {
+    position: absolute;
+    right: 16px;
+    bottom: 15px;
+}
 
 /*
  * Remove text-shadow in selection highlight:
