@@ -1,0 +1,2 @@
+# Trentoniana
+Trentoniana is a museum in the Trenton Free Public Library. As a project for the Design Perspectives Course within the Interactive Multimedia Department we were tasked with creating an interactive kiosk to showcase the artifacts and encourage visitors to interact with them. Groups were assigned to gather documents, videos and maps. My group was tasked with creating the actual application.
